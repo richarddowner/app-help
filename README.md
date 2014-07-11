@@ -1,4 +1,4 @@
-app-help
+docs
 ========
 
 Simple Golang CLI program to display application help for popular commands.
