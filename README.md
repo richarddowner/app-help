@@ -7,7 +7,7 @@ Simple Golang CLI program to display application help for popular commands.
 * Use some sort of external files for the docs
 * Use a directory structure accessable by programName
 
-### Folder Structure ###
+### Folder Structure
 
 * app-help/
 * app-help/git
@@ -16,11 +16,13 @@ Simple Golang CLI program to display application help for popular commands.
 * app-help/git/pull
 
 
-### Menu ### 
+### Menu 
 
+''''
 > app-help git
 > 1. init
   2. commit
   3. pull
 > 
   git pull origin
+''''
