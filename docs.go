@@ -3,14 +3,29 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
 func main() {
-	apps, _ := ioutil.ReadDir("./apps")
 
-	var count = 1
-	for _, app := range apps {
-		fmt.Println(count, app.Name())
-		count++
+	appName := os.Args[1]
+	availableApps, _ := ioutil.ReadDir("./apps")
+	selectedApp := ""
+
+	for _, app := range availableApps {
+		if app.Name() == appName {
+			selectedApp = app.Name()
+			fmt.Println("Selected", selectedApp)
+		} else {
+			fmt.Println("No docs available for", app)
+		}
 	}
+
+	var choice int
+	_, err := fmt.Scanf("%d", &choice)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
 }
