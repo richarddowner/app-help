@@ -41,6 +41,8 @@ func main() {
 		fmt.Println(">", cmd.Name())
 	}
 
+	fmt.Print("select a cmd: ")
+
 	// get the users cmd choice
 	var choice string
 	_, err := fmt.Scanf("%s", &choice)
@@ -50,11 +52,7 @@ func main() {
 	currentDir = currentDir + "/" + choice
 
 	// display the chosen cmd doc
-	f, err := os.Open(currentDir)
+	b, err := ioutil.ReadFile(currentDir)
 	check(err)
-
-	b1 := make([]byte, 1024)
-	n1, err := f.Read(b1)
-	check(err)
-	fmt.Printf("%d, %s", n1, string(b1))
+	fmt.Printf("> %s", string(b))
 }
