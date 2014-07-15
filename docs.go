@@ -24,7 +24,6 @@ func main() {
 	for _, app := range availableApps {
 		if app.Name() == appName {
 			currentDir = dir + "/" + appName
-			// fmt.Println(currentDir)
 			break
 		}
 	}
@@ -43,7 +42,6 @@ func main() {
 		fmt.Printf("(%d) %s\n", count, cmd.Name())
 		commands[count] = cmd.Name()
 		count++
-
 	}
 
 	fmt.Println("")
