@@ -20,7 +20,7 @@ func main() {
 	appName := os.Args[1]
 	availableApps, _ := ioutil.ReadDir(dir)
 
-	// select an available app
+	// match app selection
 	for _, app := range availableApps {
 		if app.Name() == appName {
 			currentDir = dir + "/" + appName
@@ -36,23 +36,33 @@ func main() {
 	}
 
 	// load cmd choices
+	var count = 1
+	commands := make(map[int]string)
 	availableCmd, _ := ioutil.ReadDir(currentDir)
 	for _, cmd := range availableCmd {
-		fmt.Println(">", cmd.Name())
+		fmt.Printf("(%d) %s\n", count, cmd.Name())
+		commands[count] = cmd.Name()
+		count++
+
 	}
 
-	fmt.Print("select a cmd: ")
+	fmt.Println("")
+	fmt.Print("> select: ")
 
 	// get the users cmd choice
-	var choice string
-	_, err := fmt.Scanf("%s", &choice)
+	var choice int
+	_, err := fmt.Scanf("%d", &choice)
 	check(err)
 
+	// map choice to app
+	chosenApp := string(commands[choice])
+
 	// update current dir
-	currentDir = currentDir + "/" + choice
+	currentDir = currentDir + "/" + chosenApp
 
 	// display the chosen cmd doc
 	b, err := ioutil.ReadFile(currentDir)
 	check(err)
-	fmt.Printf("> %s", string(b))
+	fmt.Printf(">> %s", string(b))
+	fmt.Println("")
 }
