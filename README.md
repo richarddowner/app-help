@@ -23,7 +23,7 @@ $ docs git
   (2) commit
   (3) pull
 
-  > select: 3
-  >> git pull origin
+  >> select: 3
+  git pull origin
   
 ````
