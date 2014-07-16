@@ -45,7 +45,7 @@ func main() {
 	}
 
 	fmt.Println("")
-	fmt.Print("> select: ")
+	fmt.Print(">> select: ")
 
 	// get the users cmd choice
 	var choice int
@@ -61,6 +61,5 @@ func main() {
 	// display the chosen cmd doc
 	b, err := ioutil.ReadFile(currentDir)
 	check(err)
-	fmt.Printf(">> %s", string(b))
-	fmt.Println("")
+	fmt.Printf("%s", string(b))
 }
