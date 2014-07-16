@@ -19,11 +19,11 @@ Simple Golang CLI program to display application help for popular commands.
 
 ````
 $ docs git
-  (1) init
-  (2) commit
-  (3) pull
+(1) init
+(2) commit
+(3) pull
 
-  >> select: 3
-  git pull origin
+>> select: 3
+git pull origin
   
 ````
