@@ -14,6 +14,8 @@ func check(e error) {
 
 func main() {
 
+	fmt.Println(" ")
+
 	const dir = "./apps"
 	currentDir := ""
 
