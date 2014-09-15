@@ -7,15 +7,13 @@ Simple Golang CLI program to display application help for popular commands.
 * Use some sort of external files for the docs
 * Use a directory structure accessable by programName
 
-### Folder Structure
+### Install
 
-* docs/
-* docs/git
-* docs/git/init
-* docs/git/commit
-* docs/git/pull
+```
+go get github.com/richarddowner/docs
+```
 
-### Menu 
+### Usage 
 
 ````
 $ docs git
@@ -27,3 +25,13 @@ $ docs git
 git pull origin
   
 ````
+
+### Folder Structure
+
+* docs/
+* docs/git
+* docs/git/init
+* docs/git/commit
+* docs/git/pull
+
+
