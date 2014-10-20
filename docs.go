@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(" ")
 
 	// const dir = "./apps" - I need a way for `go install` to take the relevant directories with it
-	const dir = "/home/richard/go/src/github.com/richarddowner/docs/apps"
+	const dir = "/home/richard/dev/go/src/github.com/richarddowner/docs/apps"
 	currentDir := ""
 
 	appName := os.Args[1]
